@@ -1,0 +1,30 @@
+- web sử dụng MySQL nên tải Xampp
+- Mở Xampp rồi start Apache và MySQL rồi chọn Admin của MySQL
+- Sau khi mở trang phpMyAdmin ở thanh sidebar bên trái -> New
+- Mục Database name nhập "phongtro" -> Create
+
+Để thêm các bảng -> vào code -> mở terminal nhập: cd server/src npx sequelize db:migrate 
+Đợi 1 chút rồi, sau đó vào lại trang Database -> SQL -> nhập dữ liệu bên dưới -> Go
+INSERT INTO categories (code, value, header, subheader, createdAt, updatedAt) VALUES ("CTPT", "Cho thuê phòng trọ", "Cho Thuê Phòng Trọ, Giá Rẻ, Tiện Nghi, Mới Nhất 2024", "Cho thuê phòng trọ - Kênh thông tin số 1 về phòng trọ giá rẻ, phòng trọ sinh viên, phòng trọ cao cấp mới nhất năm 2024. Tất cả nhà trọ cho thuê giá tốt nhất tại Việt Nam.", current_timestamp, current_timestamp);
+
+INSERT INTO categories (code, value, header, subheader, createdAt, updatedAt) VALUES ("NCT", "Nhà cho thuê", "Cho Thuê Nhà Nguyên Căn, Giá Rẻ, Chính Chủ, Mới Nhất 2024", "Cho thuê nhà nguyên căn, nhà riêng: giá rẻ, chính chủ, đầy đủ tiện nghi. Tìm thuê nhà với nhiều mức giá khác nhau, đa dạng loại diện tích. Đăng tin cho thuê nhà nhanh, hiệu quả tại phongtro123.com.", current_timestamp, current_timestamp);
+
+INSERT INTO categories (code, value, header, subheader, createdAt, updatedAt) VALUES ("CTCH", "Cho thuê căn hộ", "Cho Thuê Căn Hộ Chung Cư, Giá Rẻ, View Đẹp, Mới Nhất 2024", "Cho thuê căn hộ - Kênh đăng tin cho thuê căn hộ số 1: giá rẻ, chính chủ, đầy đủ tiện nghi. Cho thuê chung cư với nhiều mức giá, diện tích cho thuê khác nhau.", current_timestamp, current_timestamp);
+
+INSERT INTO categories (code, value, header, subheader, createdAt, updatedAt) VALUES ("CTMB", "Cho thuê mặt bằng", "Cho Thuê Mặt Bằng, Giá Rẻ, Chính Chủ, Mới Nhất 2024", "Cho thuê mặt bằng: giá rẻ, chính chủ, gần chợ, trường học, tiện mở quán ăn, cafe, kinh doanh mọi ngành nghề. Đăng tin cho thuê mặt bằng hiệu quả tại Phongtro123.com", current_timestamp, current_timestamp);
+
+INSERT INTO categories (code, value, header, subheader, createdAt, updatedAt) VALUES ("TNOG", "Tìm người ở ghép", "Tìm Người Ở Ghép, Tìm Nam Ở Ghép, Tìm Nữ Ở Ghép, Mới Nhất 2024", "Tìm người ở ghép, tìm nam ở ghép, tìm nữ ở ghép, share phòng trọ, tìm chỗ ở ghép cùng, tìm bạn ở ghép, xin ở ghép mới nhất 2024. Đăng tin ở ghép hiệu quả, nhanh chóng nhất...", current_timestamp, current_timestamp);
+
+Sau đó vào Postman(Icon màu cam)
+- Chọn POST -> Nhập: http://localhost:5000/api/v1/insert -> Send -> Bên dưới Done là được
+- Vào Database kiểm tra
+
+
+Nếu muốn xoá Database:
+- Mở Database -> sidebar bên trái -> phongtro
+- Check all -> bỏ tick areas, categories, prices, sequelizemeta
+- Chọn dropdown kế bên tìm "Drop" -> Yes
+- Chọn sequelizemeta -> Select all
+- Bỏ tick create-area, create-category, create-price
+- Delete
+Muốn tạo lại thì quay lên trên :)))
