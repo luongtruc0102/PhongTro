@@ -27,4 +27,4 @@ Nếu muốn xoá Database:
 - Chọn sequelizemeta -> Select all
 - Bỏ tick create-area, create-category, create-price
 - Delete
-Muốn tạo lại thì quay lên trên :)))
+Muốn tạo lại thì quay lên trên 
