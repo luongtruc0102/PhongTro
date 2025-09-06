@@ -109,14 +109,20 @@ const DetailPost = () => {
                 </tr>
                 <tr className='w-full'>
                   <td className='p-2'>Zalo:</td>
-                  <td className='p-2'>{posts[0]?.user?.zalo}</td>
+                  <td className='p-2'>{posts[0]?.user?.phone}</td>
                 </tr>
               </tbody>
             </table>
           </div>
           <div className='mt-8'>
           <h3 className='font-semibold text-lg my-4'>Bản đồ</h3>
-
+              <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d501726.5407345099!2d106.36556175435443!3d10.754618130150035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317529292e8d3dd1%3A0xf15f5aad773c112b!2zVGjDoG5oIHBo4buRIEjhu5MgQ2jDrSBNaW5oLCBI4buTIENow60gTWluaCwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1757139818662!5m2!1svi!2s" 
+              className='w-full h-[300px] border-0'
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
           </div>
         </div>
       </div>

@@ -5,12 +5,14 @@ import { formatVietnameseToString } from '../ultils/common/formatVNtoString'
 import avatar from '../assets/avatar.png'
 import imgnull from '../assets/img-null.png'
 import { path } from '../ultils/constant'
+import ZaloQRCodeModal from './ZaloQRCodeModal'
 
 const indexs = [0, 1, 2, 3]
 const { GoStarFill, IoMdHeartEmpty, IoMdHeart } = icons
 
 const Items = ({ images, user, title, star, address, description, attributes, id }) => {
   const [isHoverHeart, setIsHoverHeart] = useState(false)
+    const [showZaloQR, setShowZaloQR] = useState(false) 
 
   const handleStar = (star) => {
     let stars = []
@@ -79,12 +81,21 @@ const Items = ({ images, user, title, star, address, description, attributes, id
             <button
               type='button'
               className='text-secondary4 px-1 rounded-md border border-secondary4 hover:text-white hover:bg-secondary4'
+              onClick={() => setShowZaloQR(true)} 
             >
               Nhắn zalo
             </button>
           </div>
         </div>
       </div>
+
+      {/* Modal QR Zalo */}
+      {showZaloQR && (
+        <ZaloQRCodeModal
+          phone={user?.phone}
+          onClose={() => setShowZaloQR(false)}
+        />
+      )}
     </div >
   )
 }
